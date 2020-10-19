@@ -6,3 +6,4 @@ endpoints:
  - index3.php
  - numbers.php
  - strings.php
+ - conditionals.php
