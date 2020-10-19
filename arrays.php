@@ -67,4 +67,54 @@ echo "\$cars[3][0]\ \ \ \$cars[3][0]\ \ \ \$cars[3][0] . <br>";
 echo $cars[3][0].": In stock: ".$cars[3][1].", sold: ".$cars[3][2].".<br>";
 
 echo "<br>";
+
+echo " for (\$row = 0; \$row < 4; \$row++) { <br>
+  echo \"p>b>Row number \$row/b>/p>\"; <br>
+  echo \"ul>\"; <br>
+  for (\$col = 0; \$col < 3; \$col++) { <br>
+    echo \"li>\".\$cars[\$row][\$col].\"/li>\"; <br>
+  } <br> 
+  echo \"/ul>\"; <br>
+}  <br> <br>" ;
+for ($row = 0; $row < 4; $row++) {
+  echo "<p><b>Row number $row</b></p>";
+  echo "<ul>";
+  for ($col = 0; $col < 3; $col++) {
+    echo "<li>".$cars[$row][$col]."</li>";
+  }
+  echo "</ul>";
+}
+
+echo "<br>";
+
+/*
+  PHP array sort functions:
+    sort() - sort arrays in ascending order
+    rsort() - sort arrays in descending order
+    asort() - sort associative arrays in ascending order, according to the value
+    ksort() - sort associative arrays in ascending order, according to the key
+    arsort() - sort associative arrays in descending order, according to the value
+    krsort() - sort associative arrays in descending order, according to the key
+*/
+$cars = array("Volvo", "BMW", "Toyota");
+echo "var_dump(\$cars)  ", var_dump($cars), "<br>";
+sort($cars);
+echo "sort(\$cars) <br>";
+echo "var_dump(\$cars)  ", var_dump($cars), "<br>";
+rsort($cars);
+echo "rsort(\$cars); <br>";
+echo "var_dump(\$cars)  ", var_dump($cars), "<br>";
+
+echo "<br>";
+// asociative arrays
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+echo "var_dump(\$age)  ", var_dump($age), "<br>";
+ksort($age);
+echo "ksort(\$age); <br>";
+echo "var_dump(\$age)  ", var_dump($age), "<br>";
+asort($age);
+echo "asort(\$age); <br>";
+echo "var_dump(\$age)  ", var_dump($age), "<br>";
+
+
 ?>
