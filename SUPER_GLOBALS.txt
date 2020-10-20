@@ -1,0 +1,3 @@
+$_GET is an array of variables passed to the current script via the URL parameters.
+$_POST is an array of variables passed to the current script via the HTTP POST method.
+$_SERVER["PHP_SELF"] is a super global variable that returns the filename of the currently executing script.
